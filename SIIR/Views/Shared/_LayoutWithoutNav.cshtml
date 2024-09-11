@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SIIR</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SIIR.styles.css" asp-append-version="true" />
+    <style>
+        .blue-header {
+            background-color: #1a3c6e;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+    <header>
+        <div class="blue-header">
+            <img src="/logo-tecnm.png" alt="SIIR Logo" class="logo" />
+        </div>
+    </header>
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">&copy; 2024 - SIIR - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></span>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
