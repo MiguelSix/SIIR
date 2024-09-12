@@ -33,6 +33,11 @@ namespace SIIR.Controllers
             return View();
         }
 
+        public IActionResult StudentDashboard()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
