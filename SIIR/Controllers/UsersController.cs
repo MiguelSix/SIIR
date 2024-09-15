@@ -4,31 +4,21 @@ using System.Diagnostics;
 
 namespace SIIR.Controllers
 {
-    public class HomeController : Controller
+    public class UsersController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<UsersController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public UsersController(ILogger<UsersController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Information()
         {
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        public IActionResult RestorePassword()
+        public IActionResult Dashboard()
         {
             return View();
         }
