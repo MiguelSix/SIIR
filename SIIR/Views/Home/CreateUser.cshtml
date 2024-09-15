@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Restaurar Contraseña";
+    ViewData["Title"] = "Crear Usuario";
     Layout = "~/Views/Shared/_LayoutWithoutNav.cshtml";
 }
 
@@ -8,7 +8,7 @@
         background-color: #f8f9fa;
     }
 
-    .restore-password-container {
+    .create-user-container {
         max-width: 400px;
         margin: 50px auto;
         padding: 20px;
@@ -37,25 +37,29 @@
         text-decoration: none;
     }
 
-    .nav-link:hover {
-        text-decoration: underline;
-    }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
 </style>
 
 <div class="container">
-    <h2 class="text-center mt-5">Restaurar Contraseña</h2>
-    <div class="restore-password-container">
-        <form asp-controller="Account" asp-action="RestorePassword" method="post">
+    <h2 class="text-center mt-5">Crear Usuario</h2>
+    <div class="create-user-container">
+        <form asp-controller="Account" asp-action="CreateUser" method="post">
             <div class="mb-3">
                 <label for="numeroControl" class="form-label">Número de Control</label>
                 <input type="text" class="form-control" id="numeroControl" name="numeroControl" placeholder="Ingresa tu Número de Control" required>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu Correo Electrónico" required>
+                <label for="email" class="form-label">Contraseña</label>
+                <input type="email" class="form-control" id="crearContraseña" name="crearContraseña" placeholder="Escriba aqui la contraseña para el usuario" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Vuelva a escribir la contraseña</label>
+                <input type="email" class="form-control" id="confirmarContraseña" name="confirmarContraseña" placeholder="Confirme su contraseña" required>
             </div>
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Restaurar Contraseña</button>
+                <button type="submit" class="btn btn-primary">Crear Usuario</button>
             </div>
         </form>
         <div class="text-center mt-3">

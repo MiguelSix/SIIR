@@ -38,6 +38,9 @@ namespace SIIR.Controllers
             return View();
         }
 
+        // Creamos la vista de forma diferente pero efectiva igualmente, ahorramos unas lineas? XD
+        public IActionResult CreateUser() => View();
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
