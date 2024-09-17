@@ -33,6 +33,7 @@ namespace SIIR.Controllers
             return View();
         }
 
+<<<<<<< HEAD
         public IActionResult StudentDashboard()
         {
             return View();
@@ -41,6 +42,8 @@ namespace SIIR.Controllers
         // Creamos la vista de forma diferente pero efectiva igualmente, ahorramos unas lineas? XD
         public IActionResult CreateUser() => View();
 
+=======
+>>>>>>> a56204224392cbc786df2f5c114a769030dfc3fe
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
