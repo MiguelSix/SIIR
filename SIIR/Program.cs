@@ -27,8 +27,18 @@ namespace SIIR
             app.UseAuthorization();
 
             app.MapControllerRoute(
+                name: "login",
+                pattern: "login",
+                defaults: new { controller = "Home", action = "Login" });
+
+            app.MapControllerRoute(
+                name: "userDashboard",
+                pattern: "user/{userType}/dashboard",
+                defaults: new { controller = "Users", action = "Dashboard" });
+
+            app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Login}/{id?}");
 
             app.Run();
         }

@@ -18,9 +18,19 @@ namespace SIIR.Controllers
             return View();
         }
 
-        public IActionResult Dashboard()
+        public IActionResult Dashboard(string userType)
         {
-            return View();
+            switch (userType.ToLower())
+            {
+                case "admin":
+                    return View("AdminDashboard");
+                case "student":
+                    return View("StudentDashboard");
+                case "coach":
+                    return View("CoachDashboard");
+                default:
+                    return RedirectToAction("Login", "Home");
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
