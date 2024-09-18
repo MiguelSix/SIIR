@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace SIIR.Controllers
 {
-    public class UsersController : Controller
+    public class UserController : Controller
     {
-        private readonly ILogger<UsersController> _logger;
+        private readonly ILogger<UserController> _logger;
 
-        public UsersController(ILogger<UsersController> logger)
+        public UserController(ILogger<UserController> logger)
         {
             _logger = logger;
         }

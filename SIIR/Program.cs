@@ -34,7 +34,7 @@ namespace SIIR
             app.MapControllerRoute(
                 name: "userDashboard",
                 pattern: "user/{userType}/dashboard",
-                defaults: new { controller = "Users", action = "Dashboard" });
+                defaults: new { controller = "User", action = "Dashboard" });
 
             app.MapControllerRoute(
                 name: "default",
