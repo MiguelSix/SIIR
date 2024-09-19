@@ -32,12 +32,6 @@ namespace SIIR.Controllers
         {
             return View();
         }
-
-        public IActionResult StudentDashboard()
-        {
-            return View();
-        }
-
         public IActionResult CreateUser() => View();
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

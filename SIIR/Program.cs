@@ -26,15 +26,32 @@ namespace SIIR
 
             app.UseAuthorization();
 
+            //Controladores de Home
+            app.MapControllerRoute(
+                name: "createUser",
+                pattern: "createUser",
+                defaults: new { controller = "Home",  action = "CreateUser" });
+
+            app.MapControllerRoute(
+                name: "restorePassword",
+                pattern: "restorePassword",
+                defaults: new { controller = "Home", action = "RestorePassword" });
+
             app.MapControllerRoute(
                 name: "login",
                 pattern: "login",
                 defaults: new { controller = "Home", action = "Login" });
 
+            //Controladores de user
             app.MapControllerRoute(
                 name: "userDashboard",
                 pattern: "user/{userType}/dashboard",
                 defaults: new { controller = "User", action = "Dashboard" });
+
+            app.MapControllerRoute(
+                name: "information",
+                pattern: "information",
+                defaults: new { controller = "User", action = "Information" });
 
             app.MapControllerRoute(
                 name: "default",
